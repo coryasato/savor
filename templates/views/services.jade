@@ -1,0 +1,40 @@
+extends ../layouts/default
+
+block content
+  .container.product-hero
+    .fill.wow.fadeIn(style="background-image:url(" + data.heroImage.url + ")")
+
+  .container
+    .row
+      .col-xs-12
+        h1.product-blurb.wow.rollIn !{data.heading}
+
+    .row.text-overview
+      p !{data.overview} 
+
+  .container.services-list
+    .row-fluid
+      each val, index in services
+        - if(index % 2 === 0) 
+            .col-xs-12
+              .col-sm-6.no-padding
+                .service-image.fill.wow.fadeInUp(style="background-image:url(" + val.serviceImage.url + ")")
+              .col-sm-6.service-text.wow.fadeInDown
+                p.center-block !{val.serviceText}
+        - else
+            .col-xs-12
+              .col-sm-6.no-padding.pulling-right
+                .service-image.fill.wow.fadeInUp(style="background-image:url(" + val.serviceImage.url + ")")
+              .col-sm-6.service-text.pulling-left.wow.fadeInDown
+                p !{val.serviceText}
+
+  .container.no-padding.full-width
+    .jumbotron-section-dark
+      h2.hero-text.text-center.wow.fadeInDownBig !{data.blurb}
+      a(href="mailto:mio@savorbrands.com")
+        h2.text-center hello@savorbrands.com
+        
+
+
+block js
+  script(src='/js/services.js')

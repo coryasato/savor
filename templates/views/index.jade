@@ -1,0 +1,51 @@
+extends ../layouts/default
+
+block content
+	.container.fill
+		div.carousel.slide.carousel-fade(id="savorCarousel")
+			//- Indicators
+			ol.carousel-indicators
+				//-li each loop here
+				- for (var i = 0; i < data.length; i++)
+					li.carousel-bullet(data-target="#savorCarousel" data-slide-to=i.toString())
+
+			//- Wrapper for slides 
+			div.carousel-inner.animated.fadeIn
+				each image in data
+					.item.carousel-active-image
+						.fill(style="background-image:url(" + image.url + ")")
+							.container
+								.row 
+									.carousel-caption.xs-col-12
+										span !{caption} 
+	//- Thumbnails			
+	.container.thumbnail-section-home
+		.row
+			.col-xs-12.padded-div
+				h2.text-center.thumb-section-text More Projects
+		#container.row
+			each thumbnail in thumbnails
+				- var slugs = '/product/' + thumbnail.slug
+					a(href= slugs)
+						.col-xs-12.col-sm-4.iso-item.wow.fadeInUp(style="background-image:url(" + thumbnail.thumbnail.url + ")")
+							span.iso-caption  
+								p= thumbnail.thumbnailCaption
+								p.thumb-type= thumbnail.thumbnailType
+
+		.row
+			.col-xs-12.padded-div
+				a.no-deco(href="/solutions")
+					h4.text-center.thumb-section-text.lighten View All
+	//- Blurb
+	.jumbotron-section
+		h2.hero-text.text-center.wow.fadeInDownBig !{blurb}
+		a.no-deco(href="/about")
+			h4.text-center.lighten Learn more about Savor Brands
+
+
+
+
+block js
+	script(src='/js/index.js')
+
+

@@ -1,0 +1,18 @@
+extends ../layouts/default
+
+block content
+  .container.padded-section
+    .row
+      h2.text-center.padded-div Solutions
+
+  .container.thumbnail-section-home
+    #container.row
+      each thumbnail in thumbnails
+        - var slugs = '/product/' + thumbnail.slug
+          a(href= slugs)
+            .col-xs-12.col-sm-4.iso-item.wow.fadeInDownBig(style="background-image:url(" + thumbnail.thumbnail.url + ")")
+              span.iso-caption  
+                p= thumbnail.thumbnailCaption
+                p.thumb-type= thumbnail.thumbnailType
+
+block js

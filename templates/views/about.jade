@@ -1,0 +1,43 @@
+extends ../layouts/default
+
+block content
+  .container.product-hero
+    .fill.wow.fadeIn(style="background-image:url(" + data.heroImage.url + ")")
+
+  .container.no-padding.full-width
+    .jumbotron-section-white
+      h2.hero-text.text-center.wow.fadeInDown !{data.heading}
+
+  .container.about-section
+    .row.about-overview
+      .col-xs-12
+        strong Overview
+        .two-column !{data.overview}
+
+    .row.client-names
+      .col-xs-12 
+        strong Clients
+      each client in clientNames
+        .col-xs-3
+          li= client.client
+
+    .row.staff-list
+      each members in staffMembers
+        .col-xs-12.col-sm-4.staff-images.no-padding
+          .staff-image.fill.wow.fadeInDown(style="background-image:url(" + members.image.url + ")")
+          .staff-info.wow.fadeInUp
+            p= members.name
+            p= members.position
+            p= members.phone
+            a(href="mailto:" + members.email )
+              u= members.email
+
+  .container.no-padding.full-width
+    .jumbotron-section-dark
+      h2.hero-text.text-center.wow.fadeInDownBig !{data.blurb}
+      a(href="mailto:mio@savorbrands.com")
+        h2.text-center hello@savorbrands.com
+
+block js
+  script(src='/js/about.js')
+  

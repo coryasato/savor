@@ -1,0 +1,68 @@
+extends ../layouts/default
+
+block content
+	.container.product-hero
+		.fill.wow.fadeIn(style="background-image:url(" + data.heroImage.url + ")")
+
+	.container
+		.row
+			.col-xs-12
+				h1.product-blurb.wow.rollIn !{data.heading}
+
+	.container
+		.row.client-names
+			.col-xs-12.col-sm-6
+				strong Address
+				p.no-margin 521 Ala Moana Blvd. Suite 219
+				p Honolulu, Hawaii
+				br 
+				a(href='https://www.google.com/maps/dir//521+Ala+Moana+Blvd,+Honolulu,+HI+96813/@21.3013419,-157.8647078,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x7c006e0e97888ac5:0xfbc8e0abc6faa9cd!2m2!1d-157.8647078!2d21.3013419!3e0')
+					u.quick-margin Get Directions
+			.col-xs-12.col-sm-6
+				strong Emails
+				p.no-margin Sales
+				a(href='mailto:sales@savorbrands.com') 
+					u sales@savorbrands.com
+				p.no-margin Service
+				a(href='mailto:help@savorbrands.com') 
+					u help@savorbrands.com
+				p.no-margin General
+				a(href='mailto:hello@savorbrands.com') 
+					u hello@savorbrands.com
+
+
+
+	.container.contact-form
+		if enquirySubmitted
+			h3.jumbotron.text-center Thanks for getting in touch.
+		else
+			.row: .col-sm-8.col-md-6
+				h4 Contact with Savor Brands
+				br
+				form(method='post')
+					input(type='hidden', name='action', value='contact')
+					.form-group(class=validationErrors.name ? 'has-error' : null)
+						label Name
+						input(type='text', name='name.full', value=formData['name.full'], required).form-control
+					.form-group(class=validationErrors.email ? 'has-error' : null)
+						label Email
+						input(type='email', name='email', value=formData.email, required).form-control
+					.form-group
+						label Phone
+						input(type='text', name='phone', value=formData.phone, placeholder='(optional)').form-control
+					.form-group(class=validationErrors.message ? 'has-error' : null)
+						label Message
+						textarea(name='message', placeholder='Leave us a message...' rows=4).form-control= formData.message
+					.form-actions
+						button(type='submit').btn.my-btn Send
+
+	.container.no-padding.full-width
+		.jumbotron-section-dark
+			h2.hero-text.text-center.wow.fadeInDownBig !{data.blurb}
+
+
+
+
+
+
+

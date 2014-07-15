@@ -1,0 +1,54 @@
+extends ../layouts/default
+
+block content
+  .container.product-hero
+    .fill.wow.fadeIn(style="background-image:url(" + heroImage + ")")
+
+  .container
+    .row
+      .col-xs-12
+        h1.product-blurb.wow.rollIn !{blurb} 
+
+    .row.overview-section
+      .col-md-8.col-sm-6
+        p.main-overview !{overview} 
+      .specs.col-md-2.col-md-offset-2.col-sm-3.col-sm-offset-3
+        h4.specsTitle= specsTitle
+        p !{specs}
+
+  .container.product-images
+    .carousel(id="savorCarousel")
+      .carousel-inner.wow.fadeIn
+        - for(var i = 0; i < gallery.length; i++) 
+          div.item.carousel-active-image
+            .fill(style="background-image:url(" + gallery[i].url + ")")
+
+      a.carousel-control.left(href="#savorCarousel" data-slide="prev")
+        span.glyphicon.glyphicon-circle-arrow-left
+      a.carousel-control.right(href="#savorCarousel" data-slide="next")
+        span.glyphicon.glyphicon-circle-arrow-right
+
+  .container.thumbnail-section
+    .row
+      .col-xs-12.padded-div
+        h2.text-center.thumb-section-text More Projects
+    #container.row
+      each thumbnail in thumbnails
+        - var slugs = '/product/' + thumbnail.slug
+        a(href= slugs)
+          .col-xs-12.col-sm-4.iso-item.wow.fadeInDown(style="background-image:url(" + thumbnail.thumbnail.url + ")")
+            span.iso-caption  
+              p= thumbnail.thumbnailCaption
+              p.thumb-type= thumbnail.thumbnailType
+
+    .row
+      .col-xs-12.padded-div
+        a.no-deco(href="/solutions")
+          h4.text-center.thumb-section-text.lighten View All
+
+block js
+  script(src='/js/product.js')
+    
+    
+    
+        

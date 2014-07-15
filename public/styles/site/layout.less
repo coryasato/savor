@@ -1,0 +1,789 @@
+html,body { height:100%; }
+
+#header {
+  background-color: transparent;
+  height: 0;
+}
+
+#body {
+  height: 100%;
+}
+
+#footer {
+	border-top: 1px solid @gray-lighter;
+	padding-top: 80px;
+  padding-bottom: 20px;
+  border-top: none;
+	color: @gray-light;
+}
+
+.footer-logo {
+  padding-bottom: 15px;
+}
+
+.fill {
+ width: 100%;
+ height: 100%;
+ background-position: center;
+ background-size: cover;
+ background-repeat: no-repeat;
+ padding: 0;  
+}
+
+.full-width {
+  width: 100%;
+}
+
+.no-deco:hover {
+  text-decoration: none;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+u {
+  color: #333;
+}
+
+.lighten:hover {
+  color: #666;
+}
+
+.navbar-nav > li > a {
+  -webkit-transistion: all ease-in-out .7s;
+     -moz-transistion: all ease .7s;
+       -o-transistion: all ease .7s;
+          transistion: all ease-in-out .7s;
+}
+
+.navbar {
+  margin-bottom: 0px;
+  border: none;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  border: 1px solid white;
+  background-color: rgba(255,255,255,0.3);
+}
+
+.navbar-default {
+  background-color: transparent;  
+}
+
+.navbar-default .navbar-brand {
+  color: #333;
+}
+
+.navbar-default .navbar-brand:hover {
+  color: #CD5555;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #333;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+  color: #CD5555;
+  font-weight: 400;
+}
+
+.navbar-static-top {
+  padding-top: 20px;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+.navbar-collapse {
+  padding-left: 5%;
+  padding-right: 5%;
+  border: none;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+  color: #555;
+  background-color: rgba(215, 215, 215, 0);
+}
+
+.navbar>li>a:hover {
+  color: white;
+}
+
+.footer-text {
+  color: #333;
+  padding: 2%;
+
+  a {
+    color: #333;
+  }
+
+  a:hover {
+    color: #CD5555;
+  }
+}
+
+
+/*                          */
+/*        Carousel          */
+/*                          */
+.carousel,.item,.active {
+  height: 100%;
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel-fade {
+  .carousel-inner {
+    .item {
+      opacity: 0;
+      transition-property: opacity;
+    }
+
+    .active {
+      opacity: 1;
+    }
+
+    .active.left,
+    .active.right {
+      left: 0;
+      opacity: 0;
+      z-index: 1;
+    }
+
+    .next.left,
+    .prev.right {
+      opacity: 1;
+    }
+
+    .carousel-control {
+      z-index: 2;
+    }
+  }
+}
+
+.carousel-indicators {
+  .active {
+    background-color: #333;
+  }
+
+  li {
+    border: none;
+    background-color: gray;
+  }
+}
+
+.carousel-control {
+  font-size: 30px;
+}
+
+.glyphicon {
+  position: absolute;
+  top: 47%;
+}
+
+.carousel-caption {
+  color: rgba(51, 51, 51, 0.8);
+  text-align: left;
+  left: 6%;
+  right: 5%;
+  text-shadow: none;
+  bottom: 35%;
+}
+
+.carousel-caption * {
+  font-weight: 300;
+  text-decoration: underline;
+}
+
+/*                          */
+/*        Jumbotron         */
+/*                          */
+.jumbotron-section {
+  background-color: rgba(224, 223, 219, 0.3);
+  padding: 5% 8%;
+
+  h2 {
+    p {
+      font-weight: 300;
+    }
+  }
+
+  a {
+    h4 {
+      color: #333;
+      font-weight: 300;
+      padding-top: 50px;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.jumbotron-section-dark {
+  background-color: rgba(25, 25, 25, 0.9);
+  padding: 8% 8%;
+
+  h2 {
+    p {
+      font-weight: 100;
+      color: rgba(255,250,240, 1);
+    }
+  }
+
+  a {
+    h2 {
+      color: rgba(255,250,240, 1);
+      font-weight: 100;
+      text-decoration: underline;
+    }
+  }
+}
+
+.jumbotron-section-white {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 6% 8%;
+
+  h2 {
+    p {
+      font-weight: 300;
+    }
+  }
+}
+
+
+/*                          */
+/*        Product           */
+/*                          */
+
+.product-hero {
+  width: 100%;
+  height: 60%;
+  background-position: center;
+  background-size: cover;
+  padding: 0;
+}
+
+.product-blurb {
+  font-size: 20px;
+  padding: 4% 6%;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.overview-section {
+  border-top: 1px solid grey;
+  margin-left: 6%;
+  margin-right: 6%;
+  padding-top: 4%;
+  padding-bottom: 6%;
+}
+
+.product-images {
+  width: 100%;
+  height: 45%;
+  background-position: center;
+  background-size: cover;
+  padding: 0;
+}
+
+.specs {
+    padding-top: 3%;
+  }
+
+/*                          */
+/*        Thumbnails        */
+/*                          */
+.thumbnail-section-home {
+  
+}
+
+.thumbnail-section {
+  background-color: rgba(224, 223, 219, 0.3);
+  margin: 0;
+  width: 100%;
+}
+
+.padded-div {
+  padding: 4%;
+}
+
+.thumb-section-text {
+  text-decoration: none;
+  color: #333;
+  font-weight: 300;
+}
+
+#container {
+  height: 100%;
+  padding: none;
+}
+
+.thumbnail-section {
+  h2 {
+    padding-bottom: 10px;
+  }
+}
+
+.iso-item {
+  float: left;
+  padding: 0px;
+  height: 240px;
+  background: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;   
+}
+
+.iso-item img {
+  width: 100%;
+  height: 100%;
+}
+
+.iso-caption {
+  font-size: 25px;
+  width: 100%;
+  position: absolute;
+  padding: 30px 25px;
+  text-decoration: none;
+  color: #333;
+}
+
+.iso-caption:hover {
+  color: rgba(255, 85, 85, 0.8);
+}
+
+.iso-caption p {
+  margin-bottom: 0px;
+}
+
+.thumb-type {
+  font-weight: 100;
+  bottom: 10px;
+}
+
+/*                          */
+/*     Solution Section     */
+/*                          */
+.padded-section {
+  padding-top: 80px;
+
+  h2 {
+    font-weight: 200;
+  }
+}
+
+/*                          */
+/*     Services Section     */
+/*                          */
+
+.text-overview {
+  border-top: 1px solid #D3D3D3;
+  border-bottom: 1px solid #D3D3D3;
+  margin-left: 6%;
+  margin-right: 6%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+
+  p {
+    margin-left: 0;
+    line-height: 1em;
+    font-size: 12px;
+  }
+}
+
+.services-list {
+  padding-top: 4%;
+  padding-right: 5.86%;
+  padding-bottom: 4%; 
+  padding-left: 5.86%; 
+}
+
+.service-image {
+  height: 150px;
+}
+
+.service-text {
+  height: 150px;
+  overflow: auto;
+  padding: 10px 40px;
+
+  p {
+    line-height: 1.3em;
+    font-size: 12px;
+  }
+}
+
+/*                          */
+/*     About Section        */
+/*                          */
+
+.two-column {
+  -moz-column-count: 2;
+  -moz-column-gap: 50px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 50px;
+}
+
+.about-overview {
+  padding-bottom: 3%;
+}
+
+.client-names {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  border-top: 1px solid #D3D3D3;
+  border-bottom: 1px solid #D3D3D3;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+.staff-list {
+  padding-top: 7%;
+  padding-bottom: 3%;
+}
+
+.staff-image {
+  height: 150px;
+}
+
+.staff-info {
+  padding: 8% 1%;
+  line-height: 1.2em;
+
+  u {
+    color: #333;
+  }
+}
+
+/*                          */
+/*     Contact Section      */
+/*                          */
+
+.contact-section {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  border-top: 1px solid #D3D3D3;
+  border-bottom: 1px solid #D3D3D3;
+}
+
+.contact-form {
+  padding: 5% 3%;
+}
+
+.my-btn {
+  background: #333;
+  border-radius: 0;
+  color: #f8f8f8;
+  padding: 20px 50px;
+}
+
+.my-btn:hover {
+  color: rgba(255,255,255,0.9);
+}
+
+.form-control {
+  border: 0px;
+  border-bottom: 1px solid #777;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+       -o-box-shadow: none;
+          box-shadow: none;
+}
+
+/*                                                                         */
+/* Extra Small Devices (Mobile / Global styles should be above this line.) */
+/*                                                                         */
+@media (max-width: @screen-xs-max) {
+  .navbar-static-top {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .navbar-collapse {
+    background-color: rgba(224, 223, 219, 0.3);
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .navbar-brand {
+    padding: 15px 0px;
+  }
+
+  .carousel-caption {
+    bottom: 28%;
+  }
+
+  .carousel-caption * {
+    font-size: 25px;
+  }
+
+  .carousel-control {
+    font-size: 20px;
+  }
+
+  .main-overview {
+    font-size: 12px;
+  }
+
+  .specs {
+    font-size: 12px;
+  }
+
+  #container {
+    padding: 0;
+  }
+
+  .jumbotron-section {
+  background-color: rgba(224, 223, 219, 0.3);
+  padding: 5% 8%;
+
+  h2 {
+    p {
+      font-size: 20px;
+    }
+  }
+
+    a {
+      h4 {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .jumbotron-section-dark {
+
+    h2 {
+      p {
+        font-size: 20px;
+      }
+    }
+
+    a {
+      h2 {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .jumbotron-section-white {
+    h2 {
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .about-section {
+    padding-right: 12%;
+    padding-left: 12%;
+    font-size: 12px;
+  }
+
+}
+
+/*                                       */
+/* Small Devices (Tablets, 768px and up) */
+/*                                       */
+@media (min-width: @screen-sm-min) {
+  .carousel-caption {
+    bottom: 30%;
+  }
+
+  .carousel-caption * {
+    font-size: 30px;
+  }
+
+  .product-blurb {
+    font-size: 30px;
+  }
+
+  #container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .iso-item {
+    height: 180px;
+  }
+
+  .iso-caption {
+    padding: 20px 20px;
+    font-size: 14px;
+  }
+
+  .thumbnail-section {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .text-overview {
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .services-list {
+    padding-right: 5.5%;
+    padding-left: 5.5%; 
+ }
+
+  .service-image {
+    height: 200px;
+  }
+
+  .service-text {
+    height: 200px;
+  }
+
+  .pulling-right {
+    float: right;
+  }
+
+  .pulling-left {
+    float: left;
+  }
+
+  .service-text {
+    overflow: hidden;
+    padding: 20px 40px;
+
+    p {
+      line-height: 1.5em;
+    }
+  }
+
+  .about-section {
+    padding-right: 6%;
+    padding-left: 6%;
+    font-size: 13px;
+  }
+}
+
+/*                                        */
+/* Medium Devices (Laptops, 992px and up) */
+/*                                        */
+@media (min-width: @screen-md-min) {
+  
+  .carousel-caption * {
+    font-size: 40px;
+  }
+
+  .navbar-collapse {
+  background-color: transparent;
+}
+
+  .product-blurb {
+    font-size: 40px;
+  }
+
+  .specs {
+    padding-top: 0;
+  }
+
+  #container {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  .iso-item {
+    height: 210px;
+  }
+  
+  .iso-caption {
+    font-size: 18px;
+  }
+
+  .text-overview {
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .service-image {
+    height: 250px;
+  }
+
+  .service-text {
+    height: 250px;
+    overflow: hidden;
+    padding: 20px 40px;
+
+    p {
+      line-height: 1.8em;
+      font-size: 14px;
+    }
+  }
+
+  .about-section {
+    padding-right: 5%;
+    padding-left: 5%;
+    font-size: 15px;
+  }
+
+  .staff-image {
+    height: 200px;
+  }
+}
+
+/*                                         */
+/* Large Devices (Desktops, 1200px and up) */
+/*                                         */
+@media (min-width: @screen-lg-min) {
+  
+  .carousel-caption * {
+    font-size: 50px;
+  }
+
+  .product-blurb {
+    font-size: 50px;
+  }
+
+  .iso-item {
+    height: 240px;
+  }
+
+  .iso-caption {
+    font-size: 20px;
+  }
+
+  .text-overview {
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .staff-image {
+    height: 240px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
