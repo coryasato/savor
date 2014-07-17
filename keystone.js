@@ -28,7 +28,10 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
-	'cookie secret': '7-[r8nh7>,tD[Jl++sd:`@G>14FdcnX{_TiW:((-FoF;7e}&$b*R/I#2hSr(8LeG'
+	'cookie secret': '7-[r8nh7>,tD[Jl++sd:`@G>14FdcnX{_TiW:((-FoF;7e}&$b*R/I#2hSr(8LeG',
+
+	'ga property': 'UA-52953015-1',
+	'ga domain': 'http://107.170.250.98/'
 	
 });
 
