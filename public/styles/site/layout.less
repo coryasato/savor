@@ -1,5 +1,25 @@
 html,body { height:100%; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "soleil", "Helvetica Neue", Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+
+  .wf-loading & {
+    visibility: hidden;
+  }
+}
+
+p, ul {
+  font-family: "soleil", "Helvetica Neue", Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+
+  .wf-loading & {
+    visibility: hidden;
+  }
+}
+
 #header {
   background-color: transparent;
   height: 0;
@@ -48,6 +68,10 @@ html,body { height:100%; }
 
 u {
   color: #333;
+}
+
+.whiten {
+  color: rgba(255,250,240, 1)
 }
 
 .lighten:hover {
