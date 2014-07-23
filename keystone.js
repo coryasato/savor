@@ -3,7 +3,8 @@
 require('dotenv')().load();
 
 // Require keystone
-var keystone = require('keystone');
+var keystone = require('keystone'),
+		pkg      = require('./package.json');
 
 // Initialise Keystone with your project's configuration.
 // See http://keystonejs.com/guide/config for available options
@@ -24,14 +25,19 @@ keystone.init({
 	'emails': 'templates/emails',
 	
 	'auto update': true,
+	'mongo': process.env.MONGO_URI || 'mongodb://localhost/' + pkg.name,
 	
 	'session': true,
+	'session store': 'mongo',
+
 	'auth': true,
 	'user model': 'User',
-	'cookie secret': '7-[r8nh7>,tD[Jl++sd:`@G>14FdcnX{_TiW:((-FoF;7e}&$b*R/I#2hSr(8LeG',
+	'cookie secret': process.env.COOKIE_SECRET || 'savor',
 
-	'ga property': 'UA-52953015-1',
-	'ga domain': 'http://107.170.250.98/'
+	'madrill api key': process.env.MADRILL_KEY,
+
+	'ga property': process.env.GA_PROPERTY,
+	'ga domain': process.env.GA_DOMAIN
 	
 });
 
@@ -80,10 +86,10 @@ keystone.set('email locals', {
 
 keystone.set('email rules', [{
 	find: '/images/',
-	replace: (keystone.get('env') == 'production') ? 'http://107.170.250.98/images/' : 'http://localhost:3000/images/'
+	replace: (keystone.get('env') == 'production') ? 'http://107.170.250.98/images/' : 'http://localhost/images/'
 }, {
 	find: '/keystone/',
-	replace: (keystone.get('env') == 'production') ? 'http://107.170.250.98/keystone/' : 'http://localhost:3000/keystone/'
+	replace: (keystone.get('env') == 'production') ? 'http://107.170.250.98/keystone/' : 'http://localhost/keystone/'
 }]);
 
 // Load your project's email test routes
