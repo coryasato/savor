@@ -1,6 +1,6 @@
 html,body { height:100%; }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .navbar-brand {
   font-family: "soleil", "Helvetica Neue", Helvetica, sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -10,14 +10,18 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-p, ul {
+p, ul, .carousel-caption {
   font-family: "soleil", "Helvetica Neue", Helvetica, sans-serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 300;
 
   .wf-loading & {
     visibility: hidden;
   }
+}
+
+p {
+  line-height: 1.6em;
 }
 
 #header {
@@ -111,7 +115,6 @@ u {
 .navbar-default .navbar-nav > li > a {
   color: #333;
   font-size: 18px;
-  font-weight: 200;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
@@ -224,7 +227,6 @@ u {
 }
 
 .carousel-caption * {
-  font-weight: 300;
   text-decoration: underline;
 }
 
@@ -300,6 +302,10 @@ u {
   padding: 4% 6%;
   font-weight: 300;
   letter-spacing: 1px;
+
+  p {
+    margin-bottom: 0px;
+  }
 }
 
 .overview-section {
@@ -318,9 +324,17 @@ u {
   padding: 0;
 }
 
+.specsTitle {
+  padding-bottom: 25px;
+}
+
 .specs {
     padding-top: 3%;
+  
+  p {
+    line-height: 1em;
   }
+}
 
 /*                          */
 /*        Thumbnails        */
@@ -383,12 +397,12 @@ u {
   color: rgba(255, 85, 85, 0.8);
 }
 
-.iso-caption p {
+.iso-caption p:first-child {
+  font-weight: 600;
   margin-bottom: 0px;
 }
 
 .thumb-type {
-  font-weight: 100;
   bottom: 10px;
 }
 
@@ -417,7 +431,6 @@ u {
 
   p {
     margin-left: 0;
-    line-height: 1em;
     font-size: 12px;
   }
 }
@@ -436,11 +449,11 @@ u {
 .service-text {
   height: 150px;
   overflow: auto;
-  padding: 10px 40px;
+  padding: 40px 40px;
 
   p {
-    line-height: 1.3em;
     font-size: 12px;
+    margin-bottom: 0px;
   }
 }
 
@@ -559,6 +572,10 @@ u {
     font-size: 12px;
   }
 
+  .specsTitle {
+    font-size: 14px;
+  }
+
   .specs {
     font-size: 12px;
   }
@@ -573,13 +590,13 @@ u {
 
   h2 {
     p {
-      font-size: 20px;
+      font-size: 12px;
     }
   }
 
     a {
       h4 {
-        font-size: 14px;
+        font-size: 12px;
       }
     }
   }
@@ -588,13 +605,13 @@ u {
 
     h2 {
       p {
-        font-size: 20px;
+        font-size: 12px;
       }
     }
 
     a {
       h2 {
-        font-size: 20px;
+        font-size: 12px;
       }
     }
   }
@@ -602,7 +619,7 @@ u {
   .jumbotron-section-white {
     h2 {
       p {
-        font-size: 14px;
+        font-size: 12px;
       }
     }
   }
@@ -667,6 +684,7 @@ u {
 
   .service-text {
     height: 200px;
+    overflow: hidden;
   }
 
   .pulling-right {
@@ -677,21 +695,14 @@ u {
     float: left;
   }
 
-  .service-text {
-    overflow: hidden;
-    padding: 20px 40px;
-
-    p {
-      line-height: 1.5em;
-    }
-  }
-
   .about-section {
     padding-right: 6%;
     padding-left: 6%;
     font-size: 13px;
   }
 }
+
+
 
 /*                                        */
 /* Medium Devices (Laptops, 992px and up) */
@@ -739,11 +750,8 @@ u {
 
   .service-text {
     height: 250px;
-    overflow: hidden;
-    padding: 20px 40px;
 
     p {
-      line-height: 1.8em;
       font-size: 14px;
     }
   }
