@@ -1,0 +1,9 @@
+[{
+	"name": "Savor",
+	"script": "./keystone.js",
+	"args": "['--production', '-loglevel', '{0,1,2}', '--standalone', '{websocket,webserver}']",
+	"watch": "true",
+	"env": {
+		"NODE_ENV": "production"	
+	}
+}]
