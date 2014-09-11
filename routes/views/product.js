@@ -7,6 +7,9 @@ exports = module.exports = function(req, res) {
   var locals = res.locals,
     view = new keystone.View(req, res);
 
+    // Set locals
+  locals.section = 'solutions';
+
     locals.filters = {
       product: req.params.product
     };
@@ -24,7 +27,12 @@ exports = module.exports = function(req, res) {
 
         locals.heroImage = result.heroImage.url;
         locals.blurb = result.blurb;
+        locals.overviewTitle = result.overviewTitle;
         locals.overview = result.overview;
+        locals.approachTitle = result.approachTitle;
+        locals.approach = result.approach;
+        locals.solutionTitle = result.solutionTitle;
+        locals.solution = result.solution;
         locals.specsTitle = result.specsTitle;
         locals.specs = result.specs;
         locals.gallery = result.gallery;

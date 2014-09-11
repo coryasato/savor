@@ -21,26 +21,29 @@ block content
 	//- Thumbnails			
 	.container.thumbnail-section-home
 		.row
-			.col-xs-12.padded-div
-				h2.text-center.thumb-section-text More Projects
+			.col-xs-12
+				h2.text-center.thumb-section-text RECENT PROJECTS
 		#container.row
 			each thumbnail in thumbnails
 				- var slugs = '/product/' + thumbnail.slug
 					a(href= slugs)
 						.col-xs-12.col-sm-4.iso-item.wow.fadeInUp(style="background-image:url(" + thumbnail.thumbnail.url + ")")
+							.halfer
 							span.iso-caption  
 								p= thumbnail.thumbnailCaption
 								p.thumb-type= thumbnail.thumbnailType
 
 		.row
-			.col-xs-12.padded-div
+			.col-xs-12
 				a.no-deco(href="/solutions")
-					h4.text-center.thumb-section-text.lighten View All
+					h4.text-center.view-all-text View All
 	//- Blurb
 	.jumbotron-section
+		h1.glyphicon.glyphicon-star
 		h2.hero-text.text-center !{blurb}
 		a.no-deco(href="/about")
-			h4.text-center.lighten Learn more about Savor Brands
+			h4.text-center 
+				span More about Savor Brands
 
 
 

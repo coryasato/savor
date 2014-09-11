@@ -11,7 +11,14 @@ block content
 
     .row.overview-section
       .col-md-8.col-sm-6
-        p.main-overview !{overview} 
+        p.red-family= overviewTitle
+        !{overview} 
+        <br />
+        p.red-family= approachTitle
+        !{approach}
+        <br />
+        p.red-family= solutionTitle
+        !{solution}
       .specs.col-md-2.col-md-offset-2.col-sm-3.col-sm-offset-3
         h4.specsTitle= specsTitle
         p !{specs}
@@ -28,23 +35,26 @@ block content
       a.carousel-control.right(href="#savorCarousel" data-slide="next")
         span.glyphicon.glyphicon-circle-arrow-right
 
-  .container.thumbnail-section
-    .row
-      .col-xs-12.padded-div
-        h2.text-center.thumb-section-text More Projects
-    #container.row
-      each thumbnail in thumbnails
-        - var slugs = '/product/' + thumbnail.slug
-        a(href= slugs)
-          .col-xs-12.col-sm-4.iso-item.wow.fadeInDown(style="background-image:url(" + thumbnail.thumbnail.url + ")")
-            span.iso-caption  
-              p= thumbnail.thumbnailCaption
-              p.thumb-type= thumbnail.thumbnailType
+  .textured-bg
+    .container.thumbnail-section
+      .row
+        .col-xs-12
+          p.text-center.more-projects More Projects
+      #container.row
+        each thumbnail in thumbnails
+          - var slugs = '/product/' + thumbnail.slug
+          a(href= slugs)
+            .col-xs-12.col-sm-4.iso-item.wow.fadeInDown(style="background-image:url(" + thumbnail.thumbnail.url + ")")
+              .halfer
+              span.iso-caption  
+                p= thumbnail.thumbnailCaption
+                p.thumb-type= thumbnail.thumbnailType
 
-    .row
-      .col-xs-12.padded-div
-        a.no-deco(href="/solutions")
-          h4.text-center.thumb-section-text.lighten View All
+      .row
+        .col-xs-12.padded-div
+          a.no-deco(href="/solutions")
+            p.text-center 
+              span.view-all View All
 
 block js
   script(src='/js/product.js')

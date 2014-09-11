@@ -1,6 +1,6 @@
 html,body { height:100%; }
 
-h1, h2, h3, h4, h5, h6, strong, .navbar-brand {
+h1, h2, h3, h4, h5, h6, strong {
   font-family: "soleil", "Helvetica Neue", Helvetica, sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -20,25 +20,25 @@ body, p, ul, li, u, label, .carousel-caption {
   }
 }
 
-p {
-  line-height: 1.6em;
-}
+p { line-height: 1.6em; }
 
-#header {
-  background-color: transparent;
-  height: 0;
+.red-family {
+  color: #DF3225;
+  font-family: "refrigerator-deluxe", "Helvetica Neue", Helvetica, sans-serif;
+  margin: 0 auto;
 }
 
 #body {
   height: 100%;
+  background-size: cover;
 }
 
 #footer {
-	border-top: 1px solid @gray-lighter;
-	padding-top: 80px;
-  padding-bottom: 20px;
+  background-color: #656767;
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 40px;
   border-top: none;
-	color: @gray-light;
 }
 
 .footer-logo {
@@ -82,11 +82,18 @@ u {
   color: #666;
 }
 
+.navbar-nav {
+  margin-top: 18px;
+}
+
 .navbar-nav > li > a {
   -webkit-transistion: all ease-in-out .7s;
      -moz-transistion: all ease .7s;
        -o-transistion: all ease .7s;
           transistion: all ease-in-out .7s;
+  font-family: "refrigerator-deluxe", "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 900;
+  letter-spacing: 1px;
 }
 
 .navbar {
@@ -101,31 +108,21 @@ u {
 }
 
 .navbar-default {
-  background-color: transparent;  
-}
-
-.navbar-default .navbar-brand {
-  color: #333;
-}
-
-.navbar-default .navbar-brand:hover {
-  color: #CD5555;
+  background-color: white;  
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: #333;
+  color: #555;
   font-size: 18px;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
-  color: #CD5555;
+  color: #DF3225;
   font-weight: 400;
 }
 
 .navbar-static-top {
-  padding-top: 20px;
-  padding-right: 5%;
-  padding-left: 5%;
+  padding: 2% 4%;
 }
 
 .navbar-collapse {
@@ -134,25 +131,30 @@ u {
   border: none;
 }
 
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
-  color: #555;
-  background-color: rgba(215, 215, 215, 0);
+.navbar-brand {
+  padding: 0px;
+  height: 100%;
 }
 
-.navbar>li>a:hover {
-  color: white;
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+  color: #DF3225;
+  background-color: transparent;
+}
+
+.header-logo {
+  display: block;
 }
 
 .footer-text {
-  color: #333;
+  color: white;
   padding: 2%;
 
   a {
-    color: #333;
+    color: white;
   }
 
   a:hover {
-    color: #CD5555;
+    color: #DF3225;
   }
 }
 
@@ -199,12 +201,12 @@ u {
 
 .carousel-indicators {
   .active {
-    background-color: #333;
+    background-color: #DF3225;
   }
 
   li {
     border: none;
-    background-color: gray;
+    background-color: white;
   }
 }
 
@@ -212,43 +214,60 @@ u {
   font-size: 30px;
 }
 
-.glyphicon {
+.glyphicon-circle-arrow-right, .glyphicon-circle-arrow-left {
   position: absolute;
   top: 47%;
 }
 
 .carousel-caption {
-  color: rgba(51, 51, 51, 0.8);
+  color: rgba(255, 255, 255, 1);
   text-align: left;
   left: 6%;
   right: 5%;
   text-shadow: none;
-  bottom: 35%;
-}
+  bottom: 10%;
 
-.carousel-caption * {
-  text-decoration: underline;
+  span > p:first-child {
+    color: #DF3225;
+    margin-bottom: 0px;
+  }
 }
 
 /*                          */
 /*        Jumbotron         */
 /*                          */
 .jumbotron-section {
-  background-color: rgba(224, 223, 219, 0.3);
+  background: url('/images/section-texture.png') no-repeat center center;  
+  background-color: #494B4C;
+  background-size: cover;
   padding: 5% 8%;
 
   h2 {
+    color: white;
     p {
       font-weight: 300;
+      strong {
+        font-family: "refrigerator-deluxe", "Helvetica Neue", Helvetica, sans-serif;
+        font-size: 40px;
+      }
     }
   }
 
   a {
     h4 {
-      color: #333;
+      color: white;
       font-weight: 300;
-      padding-top: 50px;
+      padding-top: 40px;
       padding-bottom: 20px;
+
+      span:hover {
+        color: #DF3225;
+      }
+    }
+
+    h2 {
+      font-weight: 100;
+      text-decoration: underline;
     }
   }
 }
@@ -284,6 +303,19 @@ u {
   }
 }
 
+.glyphicon-star {
+  display: block;
+  position: relative;
+  font-size: 45px;
+  color: #DF3225;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hero-text > p{
+  margin-bottom: 0px;
+}
+
 
 /*                          */
 /*        Product           */
@@ -301,7 +333,6 @@ u {
   font-size: 20px;
   padding: 4% 6%;
   font-weight: 300;
-  letter-spacing: 1px;
 
   p {
     margin-bottom: 0px;
@@ -340,8 +371,15 @@ u {
 /*                          */
 /*        Thumbnails        */
 /*                          */
+
 .thumbnail-section-home {
-  
+  padding-bottom: 60px;
+}
+
+.textured-bg {
+  background: url('/images/section-texture.png') no-repeat center center;  
+  background-color: rgba(224,223,219,0.3);;
+  background-size: cover;
 }
 
 .thumbnail-section {
@@ -351,14 +389,35 @@ u {
 }
 
 .padded-div {
-  padding: 4%;
+  padding: 2%;
+  margin-top: 20px;
+}
+
+.solutions-title {
+  color: #555;
+  font-size: 25px;
+  margin: 0px;
+  padding: 20px 0;
 }
 
 .thumb-section-text {
+  font-family: "refrigerator-deluxe", "Helvetica Neue", Helvetica, sans-serif;
   text-decoration: none;
-  color: #333;
+  color: #444;
   font-weight: 300;
+  font-size: 25px;
+  letter-spacing: 1px;
+  margin: 0px;
+  padding: 50px 0;
 }
+
+.view-all-text {
+  text-decoration: none;
+  color: #DF3225;
+  font-weight: 300;
+  padding-top: 30px;
+  margin-bottom: 0px;
+  }
 
 #container {
   height: 100%;
@@ -385,37 +444,53 @@ u {
   height: 100%;
 }
 
+.halfer {
+  height: 67%;
+}
+
 .iso-caption {
-  font-size: 25px;
   width: 100%;
   position: absolute;
-  padding: 30px 25px;
+  padding-left: 20px;
   text-decoration: none;
-  color: #333;
+  color: white;
 }
 
 .iso-caption:hover {
-  color: rgba(255, 85, 85, 0.8);
+  color: #DF3225;;
 }
 
 .iso-caption p:first-child {
-  font-weight: 600;
-  margin-bottom: 0px;
+  font-family: "refrigerator-deluxe", "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 900;
+  margin-bottom: 3px;
 }
 
 .thumb-type {
+  position: relative;
+  font-size: 18px;
   bottom: 10px;
 }
+
+.more-projects {
+  font-size: 20px;
+  padding: 30px;
+  margin: 0px;
+}
+
+.view-all {
+  color: #555;
+}
+
+.view-all:hover {
+    color: #DF3225;
+  }
 
 /*                          */
 /*     Solution Section     */
 /*                          */
-.padded-section {
-  padding-top: 80px;
-
-  h2 {
-    font-weight: 200;
-  }
+.solutions-section {
+  background-color: #E5E5E5;
 }
 
 /*                          */
@@ -473,17 +548,7 @@ u {
   padding-bottom: 5%;
   padding-top: 5%;
   border-top: 1px solid #D3D3D3;
-}
-
-.client-names {
-  padding-top: 5%;
-  padding-bottom: 5%;
-  border-top: 1px solid #D3D3D3;
   border-bottom: 1px solid #D3D3D3;
-
-  li {
-    list-style-type: none;
-  }
 }
 
 .staff-list {
@@ -538,7 +603,7 @@ u {
 }
 
 .my-btn {
-  background: #333;
+  background: #494B4C;
   border-radius: 0;
   color: #f8f8f8;
   padding: 20px 50px;
@@ -563,8 +628,7 @@ u {
 /*                                                                         */
 @media (max-width: @screen-xs-max) {
   .navbar-static-top {
-    padding-left: 6%;
-    padding-right: 6%;
+    padding: 0% 4%;
   }
 
   .navbar-collapse {
@@ -575,10 +639,11 @@ u {
 
   .navbar-brand {
     padding: 15px 0px;
+    height: auto;
   }
 
-  .carousel-caption {
-    bottom: 28%;
+  .navbar-toggle {
+    margin-top: 35px;
   }
 
   .carousel-caption * {
@@ -591,6 +656,11 @@ u {
 
   .main-overview {
     font-size: 12px;
+  }
+
+  .iso-caption {
+    font-size: 20px;
+    padding-left: 8%;
   }
 
   .specsTitle {
@@ -606,7 +676,6 @@ u {
   }
 
   .jumbotron-section {
-  background-color: rgba(224, 223, 219, 0.3);
   padding: 5% 8%;
 
   h2 {
@@ -617,6 +686,9 @@ u {
 
     a {
       h4 {
+        font-size: 12px;
+      }
+      h2 {
         font-size: 12px;
       }
     }
@@ -657,15 +729,13 @@ u {
 /* Small Devices (Tablets, 768px and up) */
 /*                                       */
 @media (min-width: @screen-sm-min) {
-  .carousel-caption {
-    bottom: 30%;
-  }
-
+  
   .carousel-caption * {
     font-size: 30px;
   }
 
   .product-blurb {
+    color: #DF3225;
     font-size: 30px;
   }
 
@@ -679,8 +749,7 @@ u {
   }
 
   .iso-caption {
-    padding: 20px 20px;
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .thumbnail-section {
@@ -756,7 +825,7 @@ u {
   }
   
   .iso-caption {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .text-overview {
@@ -801,12 +870,16 @@ u {
     font-size: 50px;
   }
 
+  .halfer {
+  height: 70%;
+}
+
   .iso-item {
     height: 240px;
   }
 
-  .iso-caption {
-    font-size: 20px;
+  .iso-caption {    
+    font-size: 22px;
   }
 
   .text-overview {

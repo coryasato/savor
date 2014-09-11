@@ -15,7 +15,12 @@ Product.add({
   thumbnailCaption: { type: Types.Text },
   thumbnailType: { type: Types.Text },
   blurb: { type: Types.Html, wysiwyg: true, height: 150 },
-  overview : { type: Types.Html, wysiwyg: true, height: 300 },
+  overviewTitle: { type: Types.Text },
+  overview : { type: Types.Html, wysiwyg: true, height: 200 },
+  approachTitle: { type: Types.Text },
+  approach : { type: Types.Html, wysiwyg: true, height: 200 },
+  solutionTitle: { type: Types.Text },
+  solution : { type: Types.Html, wysiwyg: true, height: 200 },
   specsTitle: { type: Types.Text },
   specs: { type: Types.Html, wysiwyg: true, height: 150},
   gallery: { type: Types.CloudinaryImages }

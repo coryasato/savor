@@ -4,6 +4,9 @@ exports = module.exports = function(req, res) {
 
   var view = new keystone.View(req, res),
     locals = res.locals;
+
+  // Set locals
+  locals.section = 'services';
   
   // Get Service Page Locals
   view.on('init', function(next) {

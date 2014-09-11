@@ -14,13 +14,6 @@ block content
         strong Overview
         .two-column !{data.overview}
 
-    .row.client-names
-      .col-xs-12 
-        strong Clients
-      each client in clientNames
-        .col-xs-3
-          li= client.client
-
     .row.staff-list
       each members in staffMembers
         .col-xs-12.col-sm-4.staff-images.no-padding
@@ -32,12 +25,12 @@ block content
             a(href="mailto:" + members.email )
               u= members.email
 
-  .container.no-padding.full-width
-    .jumbotron-section-dark
-      h2.hero-text.text-center !{data.blurb}
-      a(href="mailto:mio@savorbrands.com")
-        h2.text-center hello@savorbrands.com
+  
+  .jumbotron-section
+    h1.glyphicon.glyphicon-star
+    h2.hero-text.text-center !{data.blurb}
+    a(href="mailto:mio@savorbrands.com")
+      h2.text-center hello@savorbrands.com
 
 block js
-  script(src='/js/about.js')
   
